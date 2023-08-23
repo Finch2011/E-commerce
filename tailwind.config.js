@@ -8,6 +8,8 @@ module.exports = {
       "primary" : "#8593FF",
       "white": "#ffffff",
       "black":"#000000",
+      "gray":"#B9B4C7",
+      
     },
     container: {
       center: true,
