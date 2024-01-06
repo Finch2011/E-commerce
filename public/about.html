@@ -12,62 +12,69 @@
 </head>
 
 
-<body class="bg-[#EAEDFF]">
+<body>
     <main class="container">
-        <header class="py-5 flex items-center justify-between">
+        <header class="flex items-center justify-between py-5">
             <img data-aos="fade-right" class="w-40" src="../assets/Home/logo.svg" alt="" data-aos="fade-right">
+            <button onclick="removeClass()" class="p-3 mr-5 bg-primary rounded-2xl lg:hidden" >
+                <img id="img" src="../assets/Home/moon-fill.svg" alt="">
+               </button>
+           
             <button class="flex flex-col items-center gap-y-[5px] lg:hidden" id="overlayToggle" data-aos="fade-left">
                 <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
                 <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
                 <hr class="w-9 h-[5px] bg-primary border-none rounded-full">
             </button>
+            
             <div id="overlayMenu"
                 class="flex min-w-full flex-col h-screen lg:hidden fixed top-0 right-[-100%] z-50 bg-[#fff] backdrop-blur-md shadow-4xl fade duration-500 transition-all dark:bg-[#252525]">
                 <div class="flex items-center">
                     <img class="absolute top-7 left-8 w-44" src="../assets/Home/logo.svg" alt="">
                     <button class="absolute top-8 right-8 " type="button" id="closeOverlayToggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 stroke-primary lg:hidden" fill="none"
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 stroke-primary lg:hidden" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
                 <ul
-                    class=" text-primary text-center pt-48 gap-y-7 text-lg items-center flex-col flex font-normal cursor-pointer">
+                    class="flex flex-col items-center pt-48 text-lg font-normal text-center cursor-pointer text-primary gap-y-7">
                     <a href="#">
-                        <li class="hover:text-primary duration-1000 transform transition-all hover:font-medium ">Home
+                        <li class="transition-all duration-1000 transform hover:text-primary hover:font-medium ">Home
                         </li>
                     </a>
                     <a href="#">
-                        <li class="hover:text-primary   duration-1000 transform transition-all hover:font-medium">Blog
+                        <li class="transition-all duration-1000 transform hover:text-primary hover:font-medium">Blog
                         </li>
                     </a>
                     <a href="#">
-                        <li class="hover:text-primary duration-1000  transform transition-all hover:font-medium">
+                        <li class="transition-all duration-1000 transform hover:text-primary hover:font-medium">
                             Products</li>
                     </a>
                     <a href="#">
-                        <li class="hover:text-primary duration-1000 transform transition-all hover:font-medium">Shopping
+                        <li class="transition-all duration-1000 transform hover:text-primary hover:font-medium">Shopping
                             Card</li>
                     </a>
                     <a href="login.html">
                         <li
-                            class="hover:text-primary duration-1000 transform transition-all hover:font-medium text-white bg-primary rounded-2xl py-5 w-44">
+                            class="py-5 text-white transition-all duration-1000 transform hover:text-primary hover:font-medium bg-primary rounded-2xl w-44">
                             Login</li>
                     </a>
                 </ul>
             </div>
             <ul class="=items-center gap-x-9 hidden lg:flex">
-                <li class="text-primary font-medium">Home</li>
-                <li class="hover:text-primary hover:font-medium hover:cursor-pointer duration-700 transition-all">
+                <li class="font-medium text-primary">Home</li>
+                <li class="transition-all duration-700 hover:text-primary hover:font-medium hover:cursor-pointer">
                     Products</li>
-                <li class="hover:text-primary hover:font-medium hover:cursor-pointer duration-700 transition-all">About
+                <li class="transition-all duration-700 hover:text-primary hover:font-medium hover:cursor-pointer">About
                 </li>
-                <li class="hover:text-primary hover:font-medium hover:cursor-pointer duration-700 transition-all">
+                <li class="transition-all duration-700 hover:text-primary hover:font-medium hover:cursor-pointer">
                     Contact</li>
             </ul>
-            <div class="hidden lg:flex items-center">
-
+            <div class="items-center hidden lg:flex">
+                <button onclick="removeClass()" class="hidden p-3 mr-5 bg-primary rounded-2xl lg:flex">
+                    <img id="img2" src="../assets/Home/moon-fill.svg" alt="">
+                   </button>
                 <a href="login.html">
                     <div data-aos="fade-left" class="bg-[#647efe1a] p-3 rounded-2xl hidden lg:flex ">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -120,19 +127,19 @@
     </main>
     
     <footer class="bg-gradient-to-l  from-[#5B6FFF] to-primary w-full pb-10 h-auto pt-10 container mt-10">
-        <div class="flex flex-col gap-y-9 z-40 lg:flex-row lg:justify-between">
+        <div class="z-40 flex flex-col gap-y-9 lg:flex-row lg:justify-between">
             <div>
-                <h1 data-aos="fade-up" class="text-white font-semibold text-3xl">DEVMARKET</h1>
-                <div class="flex gap-x-4 mt-5">
+                <h1 data-aos="fade-up" class="text-3xl font-semibold text-white">DEVMARKET</h1>
+                <div class="flex mt-5 gap-x-4">
                     <a href="https://enamad.ir/">
                         <img data-aos="fade" class="w-24 h-24" src="../assets/Home/namad.png" alt=""></a>
                     <img data-aos="fade" class="w-24 h-24 rounded-xl" src="../assets/Home/namad.jpg" alt="">
                 </div>
             </div>
             <ul class="flex flex-col gap-y-1">
-                <li data-aos="fade" class="text-2xl text-white font-semibold">Menu</li>
+                <li data-aos="fade" class="text-2xl font-semibold text-white">Menu</li>
 
-                <div class="lg:flex  gap-x-8">
+                <div class="lg:flex gap-x-8">
                     <li data-aos="fade-up" class="text-[#ffffffbf]">Home</li>
                     <li data-aos="fade-up" class="text-[#ffffffbf]">Products</li>
                 </div>
@@ -142,7 +149,7 @@
                 </div>
             </ul>
             <div>
-                <h1 data-aos="fade" class="text-2xl text-white font-semibold">About</h1>
+                <h1 data-aos="fade" class="text-2xl font-semibold text-white">About</h1>
                 <p data-aos="fade" class="text-[#ffffffbf] text-justify lg:w-52">Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Quod natus ab impedit nulla minima ex sit dolores iusto rerum architecto dolorem
                     illum, deleniti quam vero. Temporibus aliquam quibusdam quia quasi.</p>
@@ -155,28 +162,45 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
         AOS.init({
-            duration: 800,
-        })
-        function removeClass() {
-            document.getElementById('bod').classList.add('dark');
+    duration: 800,
+})
 
+function removeClass(){
+        const body = document.body;
+        const img = document.getElementById('img')
+        const img2 = document.getElementById('img2')
+        console.log(img.src)
+        if(img.src == "file:///C:/Users/mohamad/OneDrive/Desktop/project/E-commerce/assets/Home/moon-fill.svg"){
+            body.classList.add("dark")
+            img.src = " file:///C:/Users/mohamad/OneDrive/Desktop/project/E-commerce/assets/Home/brightness-high-fill.svg"
         }
-
-        function remove() {
-            document.getElementById('bod').classList.remove('dark');
-
+       else if(img.src = "file:///C:/Users/mohamad/OneDrive/Desktop/project/E-commerce/assets/Home/brightness-high-fill.svg"){
+            body.classList.remove("dark")
+            img.src ="file:///C:/Users/mohamad/OneDrive/Desktop/project/E-commerce/assets/Home/moon-fill.svg"
+       }
+       if(img2.src == "file:///C:/Users/mohamad/OneDrive/Desktop/project/E-commerce/assets/Home/moon-fill.svg"){
+            body.classList.add("dark")
+            img2.src = " file:///C:/Users/mohamad/OneDrive/Desktop/project/E-commerce/assets/Home/brightness-high-fill.svg"
         }
-        document.querySelector("#overlayToggle").addEventListener("click", (e) => {
-            e.preventDefault();
-            document.querySelector("#overlayMenu").classList.toggle("right-[-100%]");
-            document.querySelector("#overlayMenu").classList.toggle("right-0");
-        });
+       else if(img2.src = "file:///C:/Users/mohamad/OneDrive/Desktop/project/E-commerce/assets/Home/brightness-high-fill.svg"){
+            body.classList.remove("dark")
+            img2.src ="file:///C:/Users/mohamad/OneDrive/Desktop/project/E-commerce/assets/Home/moon-fill.svg"
+       }
+        
+    }
 
-        document.querySelector("#closeOverlayToggle").addEventListener("click", (e) => {
-            e.preventDefault();
-            document.querySelector("#overlayMenu").classList.remove("right-0");
-            document.querySelector("#overlayMenu").classList.add("right-[-100%]");
-        });
+
+    document.querySelector("#overlayToggle").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector("#overlayMenu").classList.toggle("right-[-100%]");
+  document.querySelector("#overlayMenu").classList.toggle("right-0");
+});
+
+document.querySelector("#closeOverlayToggle").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector("#overlayMenu").classList.remove("right-0");
+  document.querySelector("#overlayMenu").classList.add("right-[-100%]");
+});
     </script>
 </body>
 
